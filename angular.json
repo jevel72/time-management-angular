@@ -126,6 +126,14 @@
               "devServerTarget": "time-management:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/time-management",
+            "netlifyToken": "2qrNtH2a4nNzQSdQb9rTFHVlSMRhebuiAnkOSmmmwWI",
+            "siteId": "204ce717-cfbe-4543-9918-970153d9a8e9"
+          }
         }
       }
     }
