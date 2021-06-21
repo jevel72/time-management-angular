@@ -27,18 +27,19 @@ export class StatsComponent implements OnInit {
 
   constructor(private tasksS: TasksService) {
     this.tasksS.task$.subscribe(() => {
+      console.log(this.tasks)
       this.setup();
     });
   }
 
   setup() {
     this.chartOptions = {
-      series: this.tasksS.tasks.map(task => task.time) as any,
+      series: this.tasksS.tasks.map((task: any) => task.time) as any,
       chart: {
         width: 380,
         type: "pie"
       },
-      labels: this.tasksS.tasks.map(task => task.name) as any,
+      labels: this.tasksS.tasks.map((task: any) => task.name) as any,
       responsive: [
         {
           breakpoint: 480,
@@ -55,6 +56,7 @@ export class StatsComponent implements OnInit {
   }
 
   isDead(a: any, b: any) {
+    if (!a || !b) return;
     const aI = a.split(':');
     const bI = b.split(':');
     if (+aI[0] < +bI[0]) {
@@ -64,7 +66,6 @@ export class StatsComponent implements OnInit {
     } else if (+aI[2] < +bI[2]) {
       return true;
     }
-    console.log(b)
     return false;
   }
 

@@ -14,7 +14,7 @@
   <select name="task" id="task" #t (change)="setCurrentTask(t.value)">
     <option *ngFor="let task of tasks" [value]="task.name">{{task.name}}</option>
   </select>
-  <h1 class="app-title">Time Management</h1>
+  <h1 class="app-title" routerLink="/" style="cursor: pointer">Time Management</h1>
 </div>
 <div class="current-activity">
   <div class="router">
