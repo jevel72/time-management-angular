@@ -1,0 +1,35 @@
+.delete {
+    padding: 5px 15px;
+    background-color: rgb(226, 44, 44);
+    color: white;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    background: rebeccapurple;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 25px;
+}
+
+li {
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+    text-shadow: 0 1px 3px black;
+}
+
+#chart {
+    max-width: 380px;
+    margin: 35px auto;
+    padding: 0;
+}
+
+.dead {
+    color: rgb(245, 255, 111);
+}

@@ -1,0 +1,3 @@
+<p>Введите название новой задачи:</p>
+<input #d type="text" [(ngModel)]="newName">
+<button (click)="saveNew(); d.value = ''">Сохранить</button>

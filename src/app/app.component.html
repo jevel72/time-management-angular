@@ -1,0 +1,26 @@
+<div class="menu">
+  <button class="btn stats-btn" routerLink="/stats">
+    Статистика
+  </button>
+  <button class="btn new-btn" routerLink="/new">
+    Новая активность
+  </button>
+  <button class="btn technique-btn" routerLink="/pomodoro">
+    Техника Pomodoro
+  </button>
+  <button class="btn deadline-btn" routerLink="/deadline">
+    Ежедневные задания
+  </button>
+  <select name="task" id="task" #t (change)="setCurrentTask(t.value)">
+    <option *ngFor="let task of tasks" [value]="task.name">{{task.name}}</option>
+  </select>
+  <h1 class="app-title">Time Management</h1>
+</div>
+<div class="current-activity">
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
+  <div>
+    <button class="start-button" [class.active]="!isStart" (click)="isStart = !isStart; startTime()">{{getStartButtonStatus}}</button>
+  </div>
+</div>

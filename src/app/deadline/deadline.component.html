@@ -1,0 +1,7 @@
+<h2>Ежедневные задания</h2>
+<select name="task" id="task" #t (change)="setCurrentTask(t.value)">
+    <option *ngFor="let task of tasks" [value]="task.name">{{task.name}}</option>
+</select>
+<input type="text" [(ngModel)]="time">
+<button (click)="setTime(time)">Применить время</button>
+<p *ngIf="invalid">Введите верное время</p>

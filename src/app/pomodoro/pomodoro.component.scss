@@ -1,0 +1,27 @@
+button {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    background-color: rgb(255, 81, 81);
+    color: white;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 2px black;
+    font-size: 1.5em;
+}
+
+div {
+    margin-left: 50px;
+}
+
+.disabled {
+    background-color: gray;
+}
